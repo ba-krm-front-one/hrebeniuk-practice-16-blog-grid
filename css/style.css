@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'HansKendrick';
+    src: url('../font/hanskendrick-regular-webfont.woff2') format('woff2'),
+    url('../font/hanskendrick-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2e7ec;
+    font-family: 'HansKendrick', sans-serif;
+    color: rgb(29, 28, 28);
+}
+
+/* Layout */
+.ba-container {
+    /*	padding-left: 20px;
+        padding-right: 20px;*/
+    margin: 60px auto;
+    max-width: 1140px;
+}
+
+.ba-container__line {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.ba-news {
+    flex-grow: 1;
+    padding: 10px;
+    height: 560px;
+    min-width: 360px;
+    max-width: 380px;
+}
+
+.ba-container__line:nth-of-type(1) .ba-news:nth-of-type(1) {
+    flex-grow: 2;
+    max-width: none;
+}
+
+.ba-news__image-background {
+    height: 100%;
+    padding: 28px;
+    position: relative;
+}
+.ba-container__line:nth-of-type(1) .ba-news:nth-of-type(1) .ba-news__image-background {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("../assets/red-car.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.ba-container__line:nth-of-type(1) .ba-news:nth-of-type(2) .ba-news__image-background {
+    background: url("../assets/girl-one.jpg") #fff no-repeat top;
+}
+
+.ba-container__line:nth-of-type(2) .ba-news:nth-of-type(1) .ba-news__image-background {
+    background: url("../assets/girl-two.jpg") #fff no-repeat top;
+
+}
+
+.ba-container__line:nth-of-type(2) .ba-news:nth-of-type(2) .ba-news__image-background {
+    background: url("../assets/boots.jpg") #fff no-repeat top;
+}
+
+.ba-container__line:nth-of-type(2) .ba-news:nth-of-type(3) .ba-news__image-background {
+    background: url("../assets/white-car.jpg") #fff no-repeat top;
+}
+.ba-news__content{
+     margin-top: 240px;
+}
+.ba-content__datetime{
+    color:  #818181;
+    font-size: 13px;
+    line-height: 30px;
+}
+.ba-content__title{
+    font-family: 'HansKendrick', sans-serif;
+    font-size:  22px;
+    line-height: 33px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.ba-content__author{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 28px;
+}
+.ba-container__line:nth-of-type(1) .ba-news:nth-of-type(1) .ba-news__content{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin: 15px;
+}
+.ba-content__datetime--white{
+    color: white;
+    margin-top: 160px;
+}
+.ba-content__title--white{
+    color: white;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+.ba-container__line:nth-of-type(2) .ba-news:nth-of-type(2) .ba-content__datetime{
+    visibility: hidden;
+}
+.ba-loading{
+    display: flex;
+    justify-content: center;
+    color:  #99a5b0;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+.ba-loading__animation{
+    margin-right: 13px;
+    animation: loading .7s infinite steps(8);
+}
+@keyframes loading {
+    100% {transform: rotate(360deg);}
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button {
+    -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+    -moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+    transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button {
+    display: inline-block;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover {
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+    -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+    -moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+    transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+
+textarea {
+
+}
